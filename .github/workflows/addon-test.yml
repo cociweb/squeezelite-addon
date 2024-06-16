@@ -1,4 +1,4 @@
-name: Build and Publish Stable Add-on
+name: Test Add-on
 
 on:
   push:
