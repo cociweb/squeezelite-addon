@@ -24,8 +24,8 @@ options:
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   name: str
-    server: str?
-    output: str
-    clientmac: str
+  server: str?
+  output: str
+  clientmac: str
 homeassistant: 2024.5.0
 image: ghcr.io/cociweb/{arch}-addon-squeezelite
