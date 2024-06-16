@@ -69,7 +69,7 @@ LABEL \
     org.opencontainers.image.licenses="APACHE" \
     org.opencontainers.image.url="https://github.com/cociweb/" \
     org.opencontainers.image.source="https://github.com/cociweb/squeezelite-addon" \
-    org.opencontainers.image.documentation="https://github.com/cociweb/squeezelite-addon/blob/master/squeezelite/DOCS.md" \
+    org.opencontainers.image.documentation="https://github.com/cociweb/squeezelite-addon/blob/main/squeezelite/DOCS.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
