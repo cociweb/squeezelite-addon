@@ -35,6 +35,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Copy root filesystem
 COPY rootfs /
+RUN	chmod a+x /etc/services.d/squeezelited/* 
 
 #Create temporary directory
 RUN rm -fr /tmp/squeezelitetemp && \
