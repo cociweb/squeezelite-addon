@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+- Fix addon executables and permissions
+
 ## 2.0.1
 
 - Fix logging level for trace.
