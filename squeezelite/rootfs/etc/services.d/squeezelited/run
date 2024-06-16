@@ -14,6 +14,8 @@ bashio::log.info 'Starting the Squeezelite client daemon...'
 #Are we running in debug mode?
 if bashio::debug; then
   options+=(-d all=debug)
+elif bashio::trace; then
+  options+=(-d all=sdebug)
 else
   options+=(-d all=info)
 fi
