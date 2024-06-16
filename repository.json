@@ -1,4 +1,5 @@
 {
-  "name": "Lars Werner Hass.IO Addons Repository",
-  "maintainer": "Large <https://github.com/large>"
+    "name": "Squeezelite",
+    "url": "https://github.com/cociweb/squeezelite-addon",
+    "maintainer": "Cociweb"
 }
