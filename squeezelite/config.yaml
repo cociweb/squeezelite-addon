@@ -1,6 +1,6 @@
 ---
 name: Squeezelite
-version: 2.0.1
+version: 2.0.2
 slug: squeezelite
 description: Squeezelite client standalone on home assistant
 url: https://github.com/cociweb/squeezelite-addon
@@ -10,6 +10,7 @@ arch:
   - armhf
   - amd64
   - i386
+init: false
 map: 
   - config
 boot: auto
