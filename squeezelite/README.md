@@ -19,7 +19,7 @@ https://community.home-assistant.io/t/squeezelite-player-standalone-for-squeezeb
 Add your error and the community or the author could help you.
 
 
-
+[screenshot]: https://github.com/large/hassio-addons/raw/master/squeezelite/screenshot.png
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
