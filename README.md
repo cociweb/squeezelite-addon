@@ -1,5 +1,12 @@
-# 🥗 Lars Werner Hass.io Addons Repository  🥗
-This repository contains my add-ons for `hass.io`.
+
 ## 📄 Addons:
-### 🥧 [Squeezelite](https://github.com/large/hassio-addons/tree/master/squeezelite)
+### 🥧 [Squeezelite](https://github.com/cociweb/squeezelite-addon/tree/master/squeezelite)
 Runs the Squeezelite client as standalone in Home Assistant
+
+## Inspiration
+
+This project is heavily inspired by:
+
+- [Lars Werner][large] — basically, this project is a forked and updated version of large.
+
+Huge thanks for their ideas and efforts 👍
