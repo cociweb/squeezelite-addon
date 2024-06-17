@@ -20,6 +20,13 @@ ARG BUILD_VERSION
 # Upgrading the operating system inside the container
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 
+RUN rm -fr /tmp/squeezelitetemp && \
+	mkdir -p /tmp/squeezelitetemp
+COPY /bin/${BUILD_ARCH}/* /tmp/squeezelitetemp/
+RUN cd /tmp/squeezelitetemp && \
+    if [ "${BUILD_ARCH}" = "amd64" ]; then dpkg -i libasound2_1.2.2-2.1_amd64.deb; fi && \
+    rm -fr /tmp/squeezelitetemp
+
 # Install Squeezelite
 RUN apt-get -qq -y update && \
 	if [ "${BUILD_ARCH}" = "i386" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins libasound2"; fi && \
