@@ -1,6 +1,6 @@
 ---
 name: Squeezelite
-version: 2.0.4
+version: 2.0.5
 slug: squeezelite
 description: Squeezelite client standalone on home assistant
 url: https://github.com/cociweb/squeezelite-addon
@@ -19,6 +19,7 @@ hassio_role: default
 host_network: true
 audio: true
 options:
+  log_level: info
   name: Home Assistant Squeezelite
   output: default
   clientmac: 0A:0B:0C:0D:0E:0F
