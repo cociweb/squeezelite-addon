@@ -22,11 +22,11 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 
 # Install Squeezelite
 RUN apt-get -qq -y update && \
-	if [ "${BUILD_ARCH}" = "i386" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins alsa-lib"; fi && \
-	if [ "${BUILD_ARCH}" = "aarch64" ]; then PACKAGES="alsa-base alsa-utils alsa-lib libasound2-dev libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
-	if [ "${BUILD_ARCH}" = "amd64" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins alsa-lib"; fi && \
- 	if [ "${BUILD_ARCH}" = "armhf" ]; then PACKAGES="alsa-utils alsa-lib libasound2-dev libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
-        if [ "${BUILD_ARCH}" = "armv7" ]; then PACKAGES="alsa-base libasound2-dev alsa-lib libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
+	if [ "${BUILD_ARCH}" = "i386" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins libasound2"; fi && \
+	if [ "${BUILD_ARCH}" = "aarch64" ]; then PACKAGES="alsa-base alsa-utils libasound2 libasound2-dev libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
+	if [ "${BUILD_ARCH}" = "amd64" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins libasound2"; fi && \
+ 	if [ "${BUILD_ARCH}" = "armhf" ]; then PACKAGES="alsa-utils libasound2 libasound2-dev libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
+        if [ "${BUILD_ARCH}" = "armv7" ]; then PACKAGES="alsa-base libasound2-dev libasound2 libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
     apt-get -qq -y install ${PACKAGES}
 
     
