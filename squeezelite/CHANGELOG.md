@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.5
+## 2.0.6
 
 - Fix logging level for trace.
 - Dependency updates
