@@ -12,13 +12,15 @@ declare clientmac
 bashio::log.info 'Starting the Squeezelite client daemon...'
 
 #Are we running in debug mode?
-if bashio::debug; then
+sq_llevel="$(bashio::config 'log_level')"
+if [ "${sq_llevel}" = 'debug' ]; then
   options+=(-d all=debug)
-elif bashio::trace; then
+elif [ "${sq_llevel}" = 'trace' ]; then
   options+=(-d all=sdebug)
 else
   options+=(-d all=info)
 fi
+
 
 #If a server is set, update the options (autodiscover if not)
 if bashio::config.has_value 'server'; then
