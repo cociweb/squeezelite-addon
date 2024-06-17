@@ -1,6 +1,6 @@
 ---
 name: Squeezelite
-version: 2.0.7
+version: 2.0.8
 slug: squeezelite
 description: Squeezelite client standalone on home assistant
 url: https://github.com/cociweb/squeezelite-addon
