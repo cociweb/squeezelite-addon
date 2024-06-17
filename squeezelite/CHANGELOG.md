@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
+- Dependency updates
+
 ## 2.0.3
 
 - Fix addon executables and permissions
