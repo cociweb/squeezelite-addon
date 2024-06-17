@@ -16,7 +16,6 @@ map:
 boot: auto
 hassio_api: true
 hassio_role: default
-full_access: true
 audio: true
 options:
   log_level: info
