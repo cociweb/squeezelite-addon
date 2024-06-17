@@ -7,7 +7,7 @@ url: https://github.com/cociweb/squeezelite-addon
 startup: services
 arch:
   - aarch64
-  - armhf
+  - armv7
   - amd64
   - i386
 init: false
@@ -16,7 +16,6 @@ map:
 boot: auto
 hassio_api: true
 hassio_role: default
-privileged: list(DAC_READ_SEARCH|IPC_LOCK|NET_ADMIN|SYS_ADMIN)
 full_access: true
 audio: true
 options:
