@@ -26,17 +26,11 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 RUN apt-get -qq -y update && \
 	if [ "${BUILD_ARCH}" = "i386" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins libasound2"; fi && \
 	if [ "${BUILD_ARCH}" = "aarch64" ]; then PACKAGES="alsa-base alsa-utils libasound2 libasound2-dev libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
-	if [ "${BUILD_ARCH}" = "amd64" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins"; fi && \
+	if [ "${BUILD_ARCH}" = "amd64" ]; then PACKAGES="alsa-base alsa-utils libasound2-data libasound2-dev libasound2-plugins libasound2t64"; fi && \
  	if [ "${BUILD_ARCH}" = "armhf" ]; then PACKAGES="alsa-utils libasound2 libasound2-dev libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
         if [ "${BUILD_ARCH}" = "armv7" ]; then PACKAGES="alsa-base libasound2-dev libasound2 libasound2-plugins libasound2-data libflac-dev libmad0-dev libvorbis-dev libmpg123-dev libfaad-dev libsox-dev libsoxr-dev libavformat-dev liblirc-dev libssl-dev libopusfile-dev faad"; fi && \
     apt-get -qq -y install ${PACKAGES}
 
-RUN rm -fr /tmp/squeezelitetemp && \
-	mkdir -p /tmp/squeezelitetemp
-COPY /bin/${BUILD_ARCH}/* /tmp/squeezelitetemp/
-RUN cd /tmp/squeezelitetemp && \
-    if [ "${BUILD_ARCH}" = "amd64" ]; then dpkg -i libasound2_1.2.2-2.1_amd64.deb; fi && \
-    rm -fr /tmp/squeezelitetemp
 	
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
